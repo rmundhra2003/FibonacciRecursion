@@ -46,8 +46,15 @@ public class Main {
             intArray.add(start);
         }
         int index = intArray.size();
-        int num = intArray.get(index - 1) + intArray.get(index - 2);
-        //Call the
-        getFibonnacci(origin, num, ++iter);
+        try {
+            int num = intArray.get(index - 1) + intArray.get(index - 2);
+            //Call the
+            getFibonnacci(origin, num, ++iter);
+        }catch(ArrayIndexOutOfBoundsException e) {
+            System.out.println("Index out of bounds");
+        }finally {
+
+        }
+
     }
 }
